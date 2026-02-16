@@ -1,5 +1,5 @@
 {
-  "name": "@openui-xio-plugins/angular",
+  "name": "@openui-xio/plugin-angular",
   "version": "0.0.1",
   "type": "module",
   "keywords": [
@@ -10,7 +10,7 @@
     "agent",
     "interaction"
   ],
-  "private": true,
+  "private": false,
   "author": "OpenUI",
   "homepage": "https://openui.dev",
   "bugs": {

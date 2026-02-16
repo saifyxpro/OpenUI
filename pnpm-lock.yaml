@@ -48,18 +48,18 @@ importers:
       '@inquirer/prompts':
         specifier: ^7.0.0
         version: 7.10.1(@types/node@25.2.3)
-      '@openui-xio-plugins/angular':
-        specifier: workspace:*
-        version: link:../../plugins/angular
-      '@openui-xio-plugins/react':
-        specifier: workspace:*
-        version: link:../../plugins/react
-      '@openui-xio-plugins/vue':
-        specifier: workspace:*
-        version: link:../../plugins/vue
       '@openui-xio/karton':
         specifier: workspace:*
         version: link:../../packages/karton
+      '@openui-xio/plugin-angular':
+        specifier: workspace:*
+        version: link:../../plugins/angular
+      '@openui-xio/plugin-react':
+        specifier: workspace:*
+        version: link:../../plugins/react
+      '@openui-xio/plugin-vue':
+        specifier: workspace:*
+        version: link:../../plugins/vue
       '@openui-xio/toolbar-bridged':
         specifier: workspace:*
         version: link:../../toolbar/bridged

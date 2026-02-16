@@ -1,6 +1,6 @@
 {
   "name": "@openui-xio/plugin-sdk",
-  "private": true,
+  "private": false,
   "version": "0.0.1",
   "type": "module",
   "description": "OpenUI toolbar plugin SDK — re-exports types and components for building plugins.",

@@ -1,5 +1,5 @@
 {
-  "name": "openui",
+  "name": "@openui-xio/cli",
   "module": "src/index.ts",
   "type": "module",
   "version": "0.0.1",
@@ -27,9 +27,9 @@
   },
   "devDependencies": {
     "@inquirer/prompts": "^7.0.0",
-    "@openui-xio-plugins/angular": "workspace:*",
-    "@openui-xio-plugins/react": "workspace:*",
-    "@openui-xio-plugins/vue": "workspace:*",
+    "@openui-xio/plugin-angular": "workspace:*",
+    "@openui-xio/plugin-react": "workspace:*",
+    "@openui-xio/plugin-vue": "workspace:*",
     "@openui-xio/karton": "workspace:*",
     "@openui-xio/toolbar-bridged": "workspace:*",
     "@types/express": "^4.17.21",

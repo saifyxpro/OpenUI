@@ -1,7 +1,7 @@
 {
   "name": "@openui-xio/plugin-example",
   "version": "0.0.1",
-  "private": true,
+  "private": false,
   "type": "module",
   "license": "MIT",
   "keywords": [

@@ -1,6 +1,6 @@
 {
   "name": "@openui-xio/toolbar-bridged",
-  "private": true,
+  "private": false,
   "version": "0.0.1",
   "type": "module",
   "description": "openui toolbar SDK for AI Agent interaction.",

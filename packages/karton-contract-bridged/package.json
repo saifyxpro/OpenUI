@@ -1,9 +1,10 @@
 {
   "name": "@openui-xio/karton-contract-bridged",
+  "version": "0.0.1",
   "author": "OpenUI",
   "license": "AGPL-3.0-only",
   "type": "module",
-  "private": true,
+  "private": false,
   "scripts": {
     "build": "tsc"
   },

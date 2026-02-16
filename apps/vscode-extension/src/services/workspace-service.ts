@@ -32,9 +32,9 @@ export const DEPRECATED_TOOLBAR_PACKAGES = [
   '@openui-xio/toolbar-react',
   '@openui-xio/toolbar-vue',
   '@openui-xio/toolbar-next',
-  '@openui-xio-plugins/react',
-  '@openui-xio-plugins/vue',
-  '@openui-xio-plugins/angular',
+  '@openui-xio/plugin-react',
+  '@openui-xio/plugin-vue',
+  '@openui-xio/plugin-angular',
 ];
 
 export class WorkspaceService {

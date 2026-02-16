@@ -1,0 +1,58 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    "group:monorepos",
+    "group:recommended",
+    ":automergeMinor",
+    ":automergeDigest",
+    ":semanticCommits"
+  ],
+  "labels": ["dependencies"],
+  "rangeStrategy": "bump",
+  "enabledManagers": ["npm"],
+  "packageRules": [
+    {
+      "groupName": "React ecosystem",
+      "matchPackagePatterns": ["react", "react-dom", "@types/react"],
+      "automerge": false
+    },
+    {
+      "groupName": "Next.js",
+      "matchPackagePatterns": ["next"],
+      "automerge": false
+    },
+    {
+      "groupName": "Radix UI",
+      "matchPackagePatterns": ["@radix-ui/*"],
+      "automerge": true
+    },
+    {
+      "groupName": "Tailwind CSS",
+      "matchPackagePatterns": ["tailwindcss", "@tailwindcss/*", "tailwind-*"],
+      "automerge": true
+    },
+    {
+      "groupName": "Build tools",
+      "matchPackagePatterns": ["esbuild", "vite", "turbo", "tsup", "unbuild", "typescript"],
+      "automerge": true
+    },
+    {
+      "groupName": "Testing",
+      "matchPackagePatterns": ["vitest", "@vitest/*"],
+      "automerge": true
+    },
+    {
+      "groupName": "Linting",
+      "matchPackagePatterns": ["@biomejs/*", "biome"],
+      "automerge": true
+    },
+    {
+      "matchUpdateTypes": ["patch"],
+      "automerge": true
+    }
+  ],
+  "schedule": ["every weekend"],
+  "prConcurrentLimit": 5,
+  "ignoreDeps": []
+}

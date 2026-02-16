@@ -1,7 +1,7 @@
 {
   "name": "@openui-xio/ui",
   "type": "module",
-  "private": true,
+  "private": false,
   "scripts": {
     "lint": "biome lint . --max-warnings 0"
   },

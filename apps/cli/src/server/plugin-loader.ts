@@ -25,15 +25,15 @@ interface DependencyMatcher {
 
 // Bundled plugins that are always served locally
 const BUNDLED_PLUGINS = [
-  '@openui-xio-plugins/react',
-  '@openui-xio-plugins/angular',
-  '@openui-xio-plugins/vue',
+  '@openui-xio/plugin-react',
+  '@openui-xio/plugin-angular',
+  '@openui-xio/plugin-vue',
 ];
 
 // Dummy lookup table for matching dependencies to plugins
 const DEPENDENCY_MATCHERS: DependencyMatcher[] = [
   {
-    plugin: '@openui-xio-plugins/react',
+    plugin: '@openui-xio/plugin-react',
     dependencies: {
       react: '*',
       'react-dom': '*',
@@ -41,7 +41,7 @@ const DEPENDENCY_MATCHERS: DependencyMatcher[] = [
     },
   },
   {
-    plugin: '@openui-xio-plugins/angular',
+    plugin: '@openui-xio/plugin-angular',
     dependencies: {
       '@angular/core': '*',
       '@angular/common': '*',
@@ -49,7 +49,7 @@ const DEPENDENCY_MATCHERS: DependencyMatcher[] = [
     },
   },
   {
-    plugin: '@openui-xio-plugins/vue',
+    plugin: '@openui-xio/plugin-vue',
     dependencies: {
       vue: '*',
       '@vue/runtime-core': '*',
@@ -87,7 +87,7 @@ function matchDependenciesToPlugins(installedDeps: Set<string>): Set<string> {
  * Gets the local path for bundled plugins
  */
 function getBundledPluginPath(pluginName: string): string {
-  const simpleName = pluginName.replace('@openui-xio-plugins/', '');
+  const simpleName = pluginName.replace('@openui-xio/plugin-', '');
   return process.env.NODE_ENV === 'production'
     ? resolve(__dirname, `plugins/${simpleName}`)
     : resolve(__dirname, `../../node_modules/${pluginName}/dist`);

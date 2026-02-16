@@ -166,7 +166,7 @@ async function copyBundledPlugins() {
     // Check if plugin dist exists
     if (!existsSync(pluginSourcePath)) {
       throw new Error(
-        `Plugin ${pluginName} dist not found at ${pluginSourcePath}. Make sure to build @openui-xio-plugins/${pluginName} first.`,
+        `Plugin ${pluginName} dist not found at ${pluginSourcePath}. Make sure to build @openui-xio/plugin-${pluginName} first.`,
       );
     }
 
