@@ -1,0 +1,106 @@
+import { useChatState } from '@/hooks/use-chat-state';
+import { useContextChipHover } from '@/hooks/use-context-chip-hover';
+import { XIcon, SquareDashedMousePointer, Trash2Icon } from 'lucide-react';
+import { useMemo } from 'react';
+import { cn } from '@/utils';
+
+export function ContextElementsChips() {
+  const { domContextElements, removeChatDomContext, clearAllDomContext } =
+    useChatState();
+  const { setHoveredElement } = useContextChipHover();
+
+  if (domContextElements.length === 0) {
+    return null;
+  }
+
+  return (
+    <div className="mb-1.5">
+      <div className="scrollbar-thin scrollbar-thumb-black/15 scrollbar-track-transparent flex items-center gap-2 overflow-x-auto pb-1">
+        {domContextElements.map((contextElement, index) => (
+          <ContextElementChip
+            key={`${contextElement.element.tagName}-${index}`}
+            element={contextElement.element}
+            pluginContext={contextElement.pluginContext}
+            onDelete={() => removeChatDomContext(contextElement.element)}
+            onHover={setHoveredElement}
+            onUnhover={() => setHoveredElement(null)}
+          />
+        ))}
+        {domContextElements.length > 1 && (
+          <button
+            type="button"
+            onClick={clearAllDomContext}
+            className={cn(
+              'flex shrink-0 items-center gap-1 rounded-lg px-2 py-1 text-xs',
+              'text-muted-foreground transition-all',
+              'hover:bg-red-50 hover:text-red-600',
+            )}
+          >
+            <Trash2Icon className="size-3" />
+            <span className="font-medium">Clear all</span>
+          </button>
+        )}
+      </div>
+    </div>
+  );
+}
+
+interface ContextElementChipProps {
+  element: HTMLElement;
+  pluginContext: {
+    pluginName: string;
+    context: any;
+  }[];
+  onDelete: () => void;
+  onHover: (element: HTMLElement) => void;
+  onUnhover: () => void;
+}
+
+function ContextElementChip({
+  element,
+  pluginContext,
+  onDelete,
+  onHover,
+  onUnhover,
+}: ContextElementChipProps) {
+  const chipLabel = useMemo(() => {
+    const firstAnnotation = pluginContext.find(
+      (plugin) => plugin.context?.annotation,
+    )?.context?.annotation;
+
+    if (firstAnnotation) {
+      return firstAnnotation;
+    }
+
+    const tagName = element.tagName.toLowerCase();
+    const id = element.id ? `#${element.id}` : '';
+    return `${tagName}${id}`;
+  }, [element, pluginContext]);
+
+  return (
+    <button
+      type="button"
+      tabIndex={-1}
+      className={cn(
+        'flex min-w-fit shrink-0 items-center gap-1 rounded-lg border border-border/20 bg-white/30 px-2 py-1 text-xs shadow-sm backdrop-blur-lg transition-all hover:border-border/40 hover:bg-white/80',
+      )}
+      onMouseEnter={() => onHover(element)}
+      onMouseLeave={() => onUnhover()}
+    >
+      <SquareDashedMousePointer className="size-3 text-foreground/60" />
+      <span className="max-w-24 truncate font-medium text-foreground/80">
+        {chipLabel}
+      </span>
+      <button
+        type="button"
+        onClick={(e) => {
+          e.stopPropagation();
+          onDelete();
+        }}
+        className="text-muted-foreground transition-colors hover:text-red-500"
+      >
+        <XIcon className="size-3" />
+      </button>
+    </button>
+  );
+}

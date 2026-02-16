@@ -1,0 +1,25 @@
+{
+  "name": "@openui-dev/plugin-sdk",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "description": "OpenUI toolbar plugin SDK — re-exports types and components for building plugins.",
+  "author": "OpenUI",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc"
+  },
+  "files": ["dist"],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "dependencies": {
+    "@openui-dev/toolbar-bridged": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  }
+}

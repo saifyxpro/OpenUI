@@ -1,0 +1,107 @@
+import * as vscode from 'vscode';
+import { DIAGNOSTIC_COLLECTION_NAME } from '../constants';
+
+/**
+ * Injects a diagnostic with a prompt into the active editor and executes a callback.
+ * If no editor is active, it attempts to open the first file in the workspace.
+ * The diagnostic is displayed as an error, and the cursor is moved to the diagnostic's range.
+ * After the callback is executed, the diagnostic is cleared.
+ *
+ * @param params - The parameters for the function.
+ * @param params.prompt - The prompt message to display in the diagnostic.
+ * @param params.callback - The callback function to execute after injecting the diagnostic.
+ * @returns A promise that resolves when the operation is complete.
+ */
+export async function injectPromptDiagnosticWithCallback(params: {
+  prompt: string;
+  callback: () => Promise<any>;
+}): Promise<void> {
+  const PAGE_PATTERNS = [
+    '**/src/app/**/page.tsx', '**/src/app/**/page.jsx',
+    '**/src/pages/**/index.tsx', '**/src/pages/**/index.jsx',
+    '**/pages/**/index.vue',
+  ];
+  const LAYOUT_PATTERNS = [
+    '**/src/app/layout.tsx', '**/src/app/layout.jsx',
+    '**/src/App.tsx', '**/src/App.jsx', '**/src/App.vue',
+  ];
+
+  let editor = vscode.window.activeTextEditor;
+  if (!editor) {
+    try {
+      let targetUri: vscode.Uri | undefined;
+
+      for (const pattern of [...PAGE_PATTERNS, ...LAYOUT_PATTERNS]) {
+        const files = await vscode.workspace.findFiles(pattern, '**/node_modules/**', 1);
+        if (files.length > 0) { targetUri = files[0]; break; }
+      }
+
+      if (!targetUri) {
+        const files = await vscode.workspace.findFiles('**/*.{tsx,jsx,ts,js}', '**/node_modules/**', 1);
+        targetUri = files.length > 0 ? files[0] : undefined;
+      }
+
+      if (!targetUri) {
+        vscode.window.showErrorMessage('No source files found in workspace.');
+        return;
+      }
+
+      const document = await vscode.workspace.openTextDocument(targetUri);
+      editor = await vscode.window.showTextDocument(document);
+    } catch (_error) {
+      vscode.window.showErrorMessage('Failed to open file for prompt injection.');
+      return;
+    }
+    await new Promise((resolve) => setTimeout(resolve, 150));
+  }
+
+  const document = editor.document; // Get document early
+
+  // --- Create the Diagnostic Collection ONCE before try/finally ---
+  // This collection will be used to both set and clear the diagnostic.
+  const fakeDiagCollection = vscode.languages.createDiagnosticCollection(
+    DIAGNOSTIC_COLLECTION_NAME,
+  );
+
+  try {
+    // Use the current selection or just the current line
+    const selectionOrCurrentLine = editor.selection.isEmpty
+      ? document.lineAt(editor.selection.active.line).range // Use current line if no selection
+      : editor.selection; // Use actual selection if available
+    // 1. Create the fake diagnostic object
+    const fakeDiagnostic = new vscode.Diagnostic(
+      selectionOrCurrentLine,
+      params.prompt,
+      vscode.DiagnosticSeverity.Error,
+    );
+    fakeDiagnostic.source = DIAGNOSTIC_COLLECTION_NAME;
+
+    // 2. Set the diagnostic using the collection created outside the try block
+    fakeDiagCollection.set(document.uri, [fakeDiagnostic]);
+
+    // 3. Ensure cursor is within the diagnostic range (e.g., start)
+    editor.selection = new vscode.Selection(
+      selectionOrCurrentLine.start,
+      selectionOrCurrentLine.start,
+    );
+
+    await new Promise((resolve) => setTimeout(resolve, 10));
+
+    // 5. Execute the callback command
+    await params.callback();
+    vscode.window.showInformationMessage(`Triggered agent for prompt.`); // Simplified message
+  } catch (error) {
+    vscode.window.showErrorMessage(`Failed to inject prompt: ${error}`);
+  } finally {
+    // --- CRUCIAL: Use the SAME collection instance created ABOVE the try block ---
+    if (document) {
+      // Check if document still valid (it should be)
+      // Clear the specific diagnostic for this URI from the collection
+      fakeDiagCollection.delete(document.uri);
+    } else {
+      fakeDiagCollection.clear(); // Clear everything if URI is lost
+    }
+    // --- Dispose the collection to clean up resources ---
+    fakeDiagCollection.dispose();
+  }
+}

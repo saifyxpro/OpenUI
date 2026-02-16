@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+:root {
+  /* Core Base Colors */
+  --background: #ffffff;
+  --foreground: #0f172a; /* Slate 900 */
+  
+  /* Primary Brand - Using Royal Blue/Slate instead of Indigo/Purple to respect constraints */
+  --primary: #0f172a; /* Slate 900 - Sophisticated, High Contrast */
+  --primary-foreground: #ffffff;
+  
+  --secondary: #f1f5f9; /* Slate 100 */
+  --secondary-foreground: #0f172a;
+  
+  --muted: #f8fafc; /* Slate 50 */
+  --muted-foreground: #64748b; /* Slate 500 */
+  
+  --accent: #f1f5f9;
+  --accent-foreground: #0f172a;
+  
+  --destructive: #ef4444;
+  --destructive-foreground: #fafafa;
+
+  --border: #e2e8f0; /* Slate 200 */
+  --input: #e2e8f0;
+  --ring: #0f172a;
+
+  /* Radius */
+  --radius: 0.75rem;
+
+  /* Typography */
+  --font-heading: var(--font-libre-baskerville);
+  --font-body: var(--font-geist-sans);
+
+  /* Spacing & Layout */
+  --container-width: 1200px;
+  
+  /* Generated Tokens from Design System (Filtered for non-purple) */
+  --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  
+  /* Animations */
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --duration-normal: 300ms;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  
+  --font-heading: var(--font-heading);
+  --font-sans: var(--font-body);
+  
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+  
+  --animate-fade-in: fade-in 0.5s var(--ease-out);
+  --animate-slide-up: slide-up 0.5s var(--ease-out);
+  
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes slide-up {
+    from { transform: translateY(10px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+}
+
+/* Force Light Mode - "Light mode (purple and pink not allowed)" */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Override dark mode preferences to enforce light mode or a very light "dark" mode if absolutely necessary, 
+       but request said "Light mode". I will strictly map dark queries to light values or just not define dark overrides 
+       checking standard Next.js behavior. The user explicitly asked for "Light mode".
+       So I will NOT include the dark block, or map it to light values.
+    */
+    --background: #ffffff;
+    --foreground: #0f172a;
+    /* ... keep same as root ... */
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.025em;
+  color: var(--foreground);
+}
