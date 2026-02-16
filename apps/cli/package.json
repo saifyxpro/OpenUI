@@ -1,5 +1,5 @@
 {
-  "name": "@openui-xio/cli",
+  "name": "openui-cli",
   "module": "src/index.ts",
   "type": "module",
   "version": "0.0.1",
