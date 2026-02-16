@@ -1,5 +1,5 @@
 {
-  "name": "@openui-dev/plugin-sdk",
+  "name": "@openui-xio/plugin-sdk",
   "private": true,
   "version": "0.0.1",
   "type": "module",
@@ -17,7 +17,7 @@
     }
   },
   "dependencies": {
-    "@openui-dev/toolbar-bridged": "workspace:*"
+    "@openui-xio/toolbar-bridged": "workspace:*"
   },
   "devDependencies": {
     "typescript": "^5.9.2"

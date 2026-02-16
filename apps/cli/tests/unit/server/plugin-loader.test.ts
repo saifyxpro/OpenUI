@@ -67,7 +67,7 @@ describe('plugin-loader', () => {
       const plugins = await loadPlugins(baseConfig);
 
       expect(plugins).toHaveLength(1);
-      expect(plugins[0]?.name).toBe('@openui-dev-plugins/react');
+      expect(plugins[0]?.name).toBe('@openui-xio-plugins/react');
       expect(plugins[0]?.path).toMatch(
         /node_modules\/@openui-plugins\/react\/dist$/,
       );
@@ -99,7 +99,7 @@ describe('plugin-loader', () => {
       const plugins = await loadPlugins(baseConfig);
 
       expect(plugins).toHaveLength(1);
-      expect(plugins[0]?.name).toBe('@openui-dev-plugins/angular');
+      expect(plugins[0]?.name).toBe('@openui-xio-plugins/angular');
       expect(plugins[0]?.path).toMatch(
         /node_modules\/@openui-plugins\/angular\/dist$/,
       );
@@ -114,7 +114,7 @@ describe('plugin-loader', () => {
       const plugins = await loadPlugins(baseConfig);
 
       expect(plugins).toHaveLength(1);
-      expect(plugins[0]?.name).toBe('@openui-dev-plugins/vue');
+      expect(plugins[0]?.name).toBe('@openui-xio-plugins/vue');
       expect(plugins[0]?.path).toMatch(
         /node_modules\/@openui-plugins\/vue\/dist$/,
       );
@@ -136,8 +136,8 @@ describe('plugin-loader', () => {
       const plugins = await loadPlugins(baseConfig);
 
       expect(plugins).toHaveLength(2);
-      expect(plugins.map((p) => p.name)).toContain('@openui-dev-plugins/react');
-      expect(plugins.map((p) => p.name)).toContain('@openui-dev-plugins/vue');
+      expect(plugins.map((p) => p.name)).toContain('@openui-xio-plugins/react');
+      expect(plugins.map((p) => p.name)).toContain('@openui-xio-plugins/vue');
     });
 
     it('should not auto-load plugins when autoPlugins is false', async () => {
@@ -175,13 +175,13 @@ describe('plugin-loader', () => {
       const config = {
         ...baseConfig,
         autoPlugins: false,
-        plugins: ['@openui-dev-plugins/react', '@custom/plugin'],
+        plugins: ['@openui-xio-plugins/react', '@custom/plugin'],
       };
 
       const plugins = await loadPlugins(config);
 
       expect(plugins).toHaveLength(2);
-      expect(plugins[0]?.name).toBe('@openui-dev-plugins/react');
+      expect(plugins[0]?.name).toBe('@openui-xio-plugins/react');
       expect(plugins[0]?.path).toMatch(
         /node_modules\/@openui-plugins\/react\/dist$/,
       );
@@ -249,7 +249,7 @@ describe('plugin-loader', () => {
         ...baseConfig,
         plugins: [
           {
-            name: '@openui-dev-plugins/react',
+            name: '@openui-xio-plugins/react',
             url: 'https://custom.cdn.com/react-plugin.js',
           },
         ],
@@ -259,7 +259,7 @@ describe('plugin-loader', () => {
 
       expect(plugins).toHaveLength(1);
       expect(plugins[0]).toEqual({
-        name: '@openui-dev-plugins/react',
+        name: '@openui-xio-plugins/react',
         url: 'https://custom.cdn.com/react-plugin.js',
       });
     });
@@ -267,7 +267,7 @@ describe('plugin-loader', () => {
     it('should mark plugin as unavailable when directory is missing', async () => {
       vi.mocked(existsSync).mockImplementation((path) => {
         const pathStr = path.toString();
-        return !pathStr.includes('@openui-dev-plugins/react');
+        return !pathStr.includes('@openui-xio-plugins/react');
       });
       vi.mocked(discoverDependencies).mockResolvedValue({
         react: {
@@ -283,7 +283,7 @@ describe('plugin-loader', () => {
       const plugins = await loadPlugins(baseConfig);
 
       expect(plugins).toHaveLength(1);
-      expect(plugins[0]?.name).toBe('@openui-dev-plugins/react');
+      expect(plugins[0]?.name).toBe('@openui-xio-plugins/react');
       expect(plugins[0]?.available).toBe(false);
       expect(plugins[0]?.error).toContain('Plugin directory not found');
     });
@@ -307,7 +307,7 @@ describe('plugin-loader', () => {
       const plugins = await loadPlugins(baseConfig);
 
       expect(plugins).toHaveLength(1);
-      expect(plugins[0]?.name).toBe('@openui-dev-plugins/react');
+      expect(plugins[0]?.name).toBe('@openui-xio-plugins/react');
       expect(plugins[0]?.available).toBe(false);
       expect(plugins[0]?.error).toContain('Plugin entry point not found');
     });

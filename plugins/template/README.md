@@ -1,4 +1,4 @@
-# @openui-dev/plugin-example
+# @openui-xio/plugin-example
 
 Template plugin for scaffolding new OpenUI plugins via `npx create-openui-plugin`.
 

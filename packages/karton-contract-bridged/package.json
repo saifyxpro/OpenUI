@@ -1,5 +1,5 @@
 {
-  "name": "@openui-dev/karton-contract-bridged",
+  "name": "@openui-xio/karton-contract-bridged",
   "author": "OpenUI",
   "license": "AGPL-3.0-only",
   "type": "module",
@@ -17,7 +17,7 @@
     }
   },
   "dependencies": {
-    "@openui-dev/karton": "workspace:*"
+    "@openui-xio/karton": "workspace:*"
   },
   "devDependencies": {
     "typescript": "^5.9.2"

@@ -13,7 +13,7 @@ The CLI uses ESBuild to create an optimized bundle. The build configuration:
 
 1. **Bundles most dependencies** - Common dependencies like `axios`, `chalk`, `commander`, `zod`, `express`, `winston`, etc. are bundled into the output file
 2. **Keeps problematic dependencies external**:
-   - Workspace packages (`@openui-dev/*`) - These are linked packages not available on npm
+   - Workspace packages (`@openui-xio/*`) - These are linked packages not available on npm
 3. **Extracts licenses** - All third-party licenses are extracted to `dist/THIRD_PARTY_LICENSES.txt`
 4. **Copies static assets** - Toolbar and plugin files are copied to the dist folder
 

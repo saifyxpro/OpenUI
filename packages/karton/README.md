@@ -14,9 +14,9 @@ State synchronization and RPC library for JavaScript applications using WebSocke
 ## Installation
 
 ```bash
-npm install @openui-dev/karton
+npm install @openui-xio/karton
 # or
-pnpm add @openui-dev/karton
+pnpm add @openui-xio/karton
 ```
 
 ## Quick Start
@@ -43,7 +43,7 @@ interface MyApp {
 ### Server Setup
 
 ```typescript
-import { createKartonServer } from '@openui-dev/karton/server';
+import { createKartonServer } from '@openui-xio/karton/server';
 import express from 'express';
 import { createServer } from 'http';
 
@@ -84,7 +84,7 @@ httpServer.listen(3000);
 ### Client Setup (Vanilla JS)
 
 ```typescript
-import { createKartonClient } from '@openui-dev/karton/client';
+import { createKartonClient } from '@openui-xio/karton/client';
 
 const client = createKartonClient<MyApp>({
   webSocketPath: 'ws://localhost:3000/path-for-karton-ws-connection',
@@ -110,7 +110,7 @@ await client.serverProcedures.addUser('Alice');
 ### React Client Setup
 
 ```typescript
-import { createKartonReactClient } from '@openui-dev/karton/react/client';
+import { createKartonReactClient } from '@openui-xio/karton/react/client';
 
 const [KartonProvider, useKarton] = createKartonReactClient<MyApp>({
   webSocketPath: 'ws://localhost:3000/path-for-karton-ws-connection',

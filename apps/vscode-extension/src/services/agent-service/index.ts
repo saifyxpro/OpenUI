@@ -7,7 +7,7 @@ import {
   type AgentServer,
   type UserMessageContentItem,
   type SelectedElement,
-} from '@openui-dev/agent-interface/agent';
+} from '@openui-xio/agent-interface/agent';
 import * as vscode from 'vscode';
 import { isClineInstalled } from 'src/utils/is-cline-installed';
 import { isRoocodeInstalled } from 'src/utils/is-roocode-installed';

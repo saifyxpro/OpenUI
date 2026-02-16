@@ -20,11 +20,11 @@ import { createTRPCClient, createWSClient, wsLink } from '@trpc/client';
 import type {
   InterfaceRouter,
   OpenUIInfo,
-} from '@openui-dev/agent-interface/toolbar';
+} from '@openui-xio/agent-interface/toolbar';
 import {
   DEFAULT_STARTING_PORT,
   transformer,
-} from '@openui-dev/agent-interface/toolbar';
+} from '@openui-xio/agent-interface/toolbar';
 import { useConfig } from '@/hooks/use-config';
 
 interface AgentInfo {

@@ -163,7 +163,7 @@ function getWebviewContent(): string {
     <p class="subtitle">OpenUI has moved to a CLI-based workflow — no more toolbar npm packages needed.</p>
 
     <div class="warning">
-        The old <code>@openui-dev/toolbar-*</code> packages are deprecated. Remove them and use <code>npx openui@latest</code> instead.
+        The old <code>@openui-xio/toolbar-*</code> packages are deprecated. Remove them and use <code>npx openui@latest</code> instead.
     </div>
 
     <div class="card">

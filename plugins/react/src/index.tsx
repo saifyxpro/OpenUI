@@ -1,5 +1,5 @@
 'use client';
-import type { ToolbarPlugin } from '@openui-dev/plugin-sdk';
+import type { ToolbarPlugin } from '@openui-xio/plugin-sdk';
 import { ReactLogo } from './logo';
 import {
   getSelectedElementAnnotation,

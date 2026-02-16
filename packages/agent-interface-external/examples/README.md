@@ -1,6 +1,6 @@
 # Agent Interface Examples
 
-This directory contains examples demonstrating how to use the `@openui-dev/agent-interface` package.
+This directory contains examples demonstrating how to use the `@openui-xio/agent-interface` package.
 
 ## Examples
 

@@ -1,5 +1,5 @@
 {
-  "extends": "@openui-dev/typescript-config/react-library.json",
+  "extends": "@openui-xio/typescript-config/react-library.json",
   "compilerOptions": {
     "incremental": true,
     "module": "preserve",
@@ -7,7 +7,7 @@
     "composite": true,
     "baseUrl": ".",
     "paths": {
-      "@openui-dev/stage-ui/*": ["./src/*"]
+      "@openui-xio/stage-ui/*": ["./src/*"]
     }
   },
   "include": ["."],

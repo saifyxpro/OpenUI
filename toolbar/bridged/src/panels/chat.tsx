@@ -9,7 +9,7 @@ import { useChatState } from '@/hooks/use-chat-state';
 import { usePlugins } from '@/hooks/use-plugins';
 import { usePanels } from '@/hooks/use-panels';
 import { cn } from '@/utils';
-import { AgentStateType } from '@openui-dev/agent-interface/toolbar';
+import { AgentStateType } from '@openui-xio/agent-interface/toolbar';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { ContextElementsChips } from '@/components/context-elements-chips';
 import { AgentMessageDisplay } from '@/components/agent-message-display';

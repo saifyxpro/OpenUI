@@ -55,7 +55,7 @@ export default async function buildToolbarMain() {
           'react-dom',
           'react-dom/client',
           'react/jsx-runtime',
-          '@openui-dev/toolbar/config',
+          '@openui-xio/toolbar/config',
         ],
         output: {
           manualChunks: undefined,
@@ -73,7 +73,7 @@ export default async function buildToolbarMain() {
     optimizeDeps: {
       include: [
         '@trpc/client',
-        '@openui-dev/agent-interface',
+        '@openui-xio/agent-interface',
         'lucide-react',
         'zod',
         '@headlessui/react',

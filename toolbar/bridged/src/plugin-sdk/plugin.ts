@@ -1,4 +1,4 @@
-import type { SelectedElement } from '@openui-dev/agent-interface/toolbar';
+import type { SelectedElement } from '@openui-xio/agent-interface/toolbar';
 
 export type { SelectedElement };
 

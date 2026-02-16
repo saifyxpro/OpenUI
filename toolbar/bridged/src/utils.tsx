@@ -1,7 +1,7 @@
 import type {
   SelectedElement,
   UserMessageMetadata,
-} from '@openui-dev/agent-interface/toolbar';
+} from '@openui-xio/agent-interface/toolbar';
 
 export const companionAnchorTagName = 'openui-companion-anchor';
 

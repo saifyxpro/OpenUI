@@ -1,5 +1,5 @@
 {
-  "extends": "@openui-dev/typescript-config/react-library.json",
+  "extends": "@openui-xio/typescript-config/react-library.json",
   "compilerOptions": {
     "outDir": "dist"
   },

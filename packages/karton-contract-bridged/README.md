@@ -1,4 +1,4 @@
-# @openui-dev/karton-contract-bridged
+# @openui-xio/karton-contract-bridged
 
 Karton contract types for the OpenUI bridge mode.
 
@@ -7,7 +7,7 @@ This is an internal package — it defines the WebSocket RPC contract used betwe
 ## Usage
 
 ```typescript
-import type { KartonContract } from '@openui-dev/karton-contract-bridged';
+import type { KartonContract } from '@openui-xio/karton-contract-bridged';
 ```
 
 ## License

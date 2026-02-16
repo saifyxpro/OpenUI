@@ -1,4 +1,4 @@
-# @openui-dev/stage-ui
+# @openui-xio/stage-ui
 
 ## 0.0.2
 

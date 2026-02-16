@@ -1,4 +1,4 @@
-import type { SelectedElement } from '@openui-dev/plugin-sdk';
+import type { SelectedElement } from '@openui-xio/plugin-sdk';
 
 interface FiberNode {
   displayName?: string;

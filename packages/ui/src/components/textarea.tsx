@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { cn } from '@openui-dev/ui/lib/utils';
+import { cn } from '@openui-xio/ui/lib/utils';
 
 function Textarea({ className, ...props }: React.ComponentProps<'textarea'>) {
   return (

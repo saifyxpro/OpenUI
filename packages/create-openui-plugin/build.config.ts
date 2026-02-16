@@ -49,7 +49,7 @@ function replaceWorkspaceWithLocalToolbarVersion(pkgJsonPath: string) {
     if (pkgJson[depType]) {
       for (const dep in pkgJson[depType]) {
         if (
-          dep === '@openui-dev/toolbar' &&
+          dep === '@openui-xio/toolbar' &&
           pkgJson[depType][dep] === 'workspace:*' &&
           toolbarVersion
         ) {
@@ -63,7 +63,7 @@ function replaceWorkspaceWithLocalToolbarVersion(pkgJsonPath: string) {
   if (changed) {
     fs.writeFileSync(pkgJsonPath, JSON.stringify(pkgJson, null, 2));
     console.log(
-      `Replaced \"@openui-dev/toolbar\": \"workspace:*\" with \"${toolbarVersion}\" in ${pkgJsonPath}`,
+      `Replaced \"@openui-xio/toolbar\": \"workspace:*\" with \"${toolbarVersion}\" in ${pkgJsonPath}`,
     );
   }
 }

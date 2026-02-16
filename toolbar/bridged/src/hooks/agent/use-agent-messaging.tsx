@@ -10,7 +10,7 @@ import type {
   AgentMessageContentItemPart,
   UserMessage,
   AgentMessageUpdate,
-} from '@openui-dev/agent-interface/toolbar';
+} from '@openui-xio/agent-interface/toolbar';
 import { type ReactNode, createContext } from 'react';
 import { useAgents } from './use-agent-provider.js';
 

@@ -4,7 +4,7 @@ import {
   PanelContent,
   useToolbar,
   Button,
-} from '@openui-dev/plugin-sdk';
+} from '@openui-xio/plugin-sdk';
 
 export const ExampleComponent = () => {
   const toolbar = useToolbar();

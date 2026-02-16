@@ -1,4 +1,4 @@
-# @openui-dev/ui
+# @openui-xio/ui
 
 ## 0.0.2
 

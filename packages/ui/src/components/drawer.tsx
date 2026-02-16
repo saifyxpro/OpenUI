@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { Drawer as DrawerPrimitive } from 'vaul';
 
-import { cn } from '@openui-dev/ui/lib/utils';
+import { cn } from '@openui-xio/ui/lib/utils';
 
 function Drawer({
   ...props

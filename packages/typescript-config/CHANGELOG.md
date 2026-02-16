@@ -1,4 +1,4 @@
-# @openui-dev/typescript-config
+# @openui-xio/typescript-config
 
 ## 0.0.1
 

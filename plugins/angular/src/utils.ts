@@ -1,7 +1,7 @@
 import type {
   ContextElementContext,
   SelectedElement,
-} from '@openui-dev/plugin-sdk';
+} from '@openui-xio/plugin-sdk';
 
 interface AngularComponentInfo {
   name: string;

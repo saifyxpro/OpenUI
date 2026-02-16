@@ -1,4 +1,4 @@
-# @openui-dev/agent-interface
+# @openui-xio/agent-interface
 
 ## 0.0.1
 

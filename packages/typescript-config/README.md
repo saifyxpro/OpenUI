@@ -1,4 +1,4 @@
-# @openui-dev/typescript-config
+# @openui-xio/typescript-config
 
 Shared TypeScript configuration for the OpenUI monorepo.
 
@@ -8,7 +8,7 @@ Extend in your `tsconfig.json`:
 
 ```json
 {
-  "extends": "@openui-dev/typescript-config/base.json"
+  "extends": "@openui-xio/typescript-config/base.json"
 }
 ```
 

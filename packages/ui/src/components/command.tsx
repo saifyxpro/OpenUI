@@ -4,14 +4,14 @@ import * as React from 'react';
 import { Command as CommandPrimitive } from 'cmdk';
 import { SearchIcon } from 'lucide-react';
 
-import { cn } from '@openui-dev/ui/lib/utils';
+import { cn } from '@openui-xio/ui/lib/utils';
 import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
   DialogTitle,
-} from '@openui-dev/ui/components/dialog';
+} from '@openui-xio/ui/components/dialog';
 
 function Command({
   className,

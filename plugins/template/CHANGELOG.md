@@ -1,4 +1,4 @@
-# @openui-dev/plugin-example
+# @openui-xio/plugin-example
 
 ## 0.0.1
 

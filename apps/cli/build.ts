@@ -135,7 +135,7 @@ async function copyToolbarBridgedDist() {
   // Check if toolbar dist exists
   if (!existsSync(toolbarDistPath)) {
     throw new Error(
-      'Toolbar bridged dist not found. Make sure to build @openui-dev/toolbar-bridged first.',
+      'Toolbar bridged dist not found. Make sure to build @openui-xio/toolbar-bridged first.',
     );
   }
 
@@ -166,7 +166,7 @@ async function copyBundledPlugins() {
     // Check if plugin dist exists
     if (!existsSync(pluginSourcePath)) {
       throw new Error(
-        `Plugin ${pluginName} dist not found at ${pluginSourcePath}. Make sure to build @openui-dev-plugins/${pluginName} first.`,
+        `Plugin ${pluginName} dist not found at ${pluginSourcePath}. Make sure to build @openui-xio-plugins/${pluginName} first.`,
       );
     }
 

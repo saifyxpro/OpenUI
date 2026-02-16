@@ -1,4 +1,4 @@
-# @openui-dev/agent-interface
+# @openui-xio/agent-interface
 
 Agent communication protocol for connecting the OpenUI toolbar to IDE agents.
 
@@ -12,13 +12,13 @@ Agent communication protocol for connecting the OpenUI toolbar to IDE agents.
 ## Installation
 
 ```bash
-npm install @openui-dev/agent-interface
+npm install @openui-xio/agent-interface
 ```
 
 ## Usage
 
 ```typescript
-import { createAgentServer } from '@openui-dev/agent-interface';
+import { createAgentServer } from '@openui-xio/agent-interface';
 
 const { agent } = await createAgentServer({ port: 3000 });
 

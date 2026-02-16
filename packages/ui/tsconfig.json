@@ -1,9 +1,9 @@
 {
-  "extends": "@openui-dev/typescript-config/react-library.json",
+  "extends": "@openui-xio/typescript-config/react-library.json",
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@openui-dev/ui/*": ["./src/*"]
+      "@openui-xio/ui/*": ["./src/*"]
     }
   },
   "include": ["."],

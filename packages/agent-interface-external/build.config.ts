@@ -1,7 +1,7 @@
 import { defineConfig } from 'tsup';
 
 /**
- * Build configuration for @openui-dev/agent-interface package
+ * Build configuration for @openui-xio/agent-interface package
  *
  * This configuration creates:
  * - Two separate entry points: `toolbar` and `agent` in subfolders

@@ -28,7 +28,7 @@
     "@changesets/cli": "^2.29.5",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
-    "@openui-dev/typescript-config": "workspace:*",
+    "@openui-xio/typescript-config": "workspace:*",
     "@types/node": "22.15.2",
     "lefthook": "^1.12.2",
     "ts-node": "10.9.2",

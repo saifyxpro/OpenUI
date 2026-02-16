@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from 'react';
 import {
   type AgentState,
   AgentStateType,
-} from '@openui-dev/agent-interface/toolbar';
+} from '@openui-xio/agent-interface/toolbar';
 
 import { useAgents } from './use-agent-provider.js';
 import { type ReactNode, createContext } from 'react';

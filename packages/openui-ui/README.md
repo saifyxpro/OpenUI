@@ -1,4 +1,4 @@
-# @openui-dev/stage-ui
+# @openui-xio/stage-ui
 
 Internal UI component library for the OpenUI toolbar, built with Tailwind CSS.
 

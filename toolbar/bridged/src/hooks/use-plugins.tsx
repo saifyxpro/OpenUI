@@ -6,7 +6,7 @@ import type {
   ToolbarPlugin,
 } from '@/plugin-sdk/plugin';
 import { useConfig } from './use-config.js';
-import type { UserMessage } from '@openui-dev/agent-interface/toolbar';
+import type { UserMessage } from '@openui-xio/agent-interface/toolbar';
 import { useAgentMessaging } from './agent/use-agent-messaging.js';
 import {
   collectUserMessageMetadata,

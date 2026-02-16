@@ -1,4 +1,4 @@
-# @openui-dev/karton
+# @openui-xio/karton
 
 ## 0.0.1
 

@@ -1,4 +1,4 @@
-# @openui-dev/ui
+# @openui-xio/ui
 
 Shared UI components for OpenUI web interfaces, built on Radix UI primitives.
 

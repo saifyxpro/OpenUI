@@ -30,22 +30,22 @@ This is a monorepo for OpenUI — a browser-to-IDE bridge that lets you select U
 - **Purpose**: Receives prompts from the browser toolbar via WebSocket and forwards them to the IDE's AI agent (Cursor, Copilot, Windsurf, Cline, Roo Code, Kilo Code, Trae, Antigravity).
 
 ### Toolbar (Bridged)
-- **Package name**: `@openui-dev/toolbar-bridged`
+- **Package name**: `@openui-xio/toolbar-bridged`
 - **Path**: `toolbar/bridged`
 - **Purpose**: The toolbar web app served by the CLI proxy, rendered on top of the user's dev app.
 
 ### Plugin SDK
-- **Package name**: `@openui-dev/plugin-sdk`
+- **Package name**: `@openui-xio/plugin-sdk`
 - **Path**: `toolbar/plugin-sdk`
 - **Purpose**: SDK for building OpenUI plugins that extend toolbar functionality.
 
 ### Agent Interface
-- **Package name**: `@openui-dev/agent-interface`
+- **Package name**: `@openui-xio/agent-interface`
 - **Path**: `packages/agent-interface-external`
 - **Purpose**: Agent communication protocol — defines the interface between toolbar and IDE agents.
 
 ### Karton
-- **Package name**: `@openui-dev/karton`
+- **Package name**: `@openui-xio/karton`
 - **Path**: `packages/karton`
 - **Purpose**: WebSocket RPC framework for real-time state sync between CLI and toolbar.
 

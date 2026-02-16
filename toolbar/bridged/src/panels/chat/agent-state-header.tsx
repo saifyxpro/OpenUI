@@ -1,6 +1,6 @@
 import { PanelHeader } from '@/components/ui/panel';
 import { cn } from '@/utils';
-import { AgentStateType } from '@openui-dev/agent-interface/toolbar';
+import { AgentStateType } from '@openui-xio/agent-interface/toolbar';
 import {
   Loader2Icon,
   MessageCircleQuestionIcon,

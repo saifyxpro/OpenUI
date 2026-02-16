@@ -12,8 +12,8 @@ import { useAgentState } from './agent/use-agent-state.js';
 import type {
   UserMessage,
   UserMessageContentItem,
-} from '@openui-dev/agent-interface/toolbar';
-import { AgentStateType } from '@openui-dev/agent-interface/toolbar';
+} from '@openui-xio/agent-interface/toolbar';
+import { AgentStateType } from '@openui-xio/agent-interface/toolbar';
 import { usePanels } from './use-panels.js';
 
 interface ContextSnippet {

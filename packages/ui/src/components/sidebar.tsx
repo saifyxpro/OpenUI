@@ -5,25 +5,25 @@ import { Slot } from '@radix-ui/react-slot';
 import { type VariantProps, cva } from 'class-variance-authority';
 import { PanelLeftIcon } from 'lucide-react';
 
-import { useIsMobile } from '@openui-dev/ui/hooks/use-mobile';
-import { cn } from '@openui-dev/ui/lib/utils';
-import { Button } from '@openui-dev/ui/components/button';
-import { Input } from '@openui-dev/ui/components/input';
-import { Separator } from '@openui-dev/ui/components/separator';
+import { useIsMobile } from '@openui-xio/ui/hooks/use-mobile';
+import { cn } from '@openui-xio/ui/lib/utils';
+import { Button } from '@openui-xio/ui/components/button';
+import { Input } from '@openui-xio/ui/components/input';
+import { Separator } from '@openui-xio/ui/components/separator';
 import {
   Sheet,
   SheetContent,
   SheetDescription,
   SheetHeader,
   SheetTitle,
-} from '@openui-dev/ui/components/sheet';
-import { Skeleton } from '@openui-dev/ui/components/skeleton';
+} from '@openui-xio/ui/components/sheet';
+import { Skeleton } from '@openui-xio/ui/components/skeleton';
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from '@openui-dev/ui/components/tooltip';
+} from '@openui-xio/ui/components/tooltip';
 
 const SIDEBAR_COOKIE_NAME = 'sidebar_state';
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;

@@ -1,6 +1,6 @@
 import express, { type Request, type Response } from 'express';
 import type { WebSocketServer, WebSocket } from 'ws';
-import { createKartonServer } from '@openui-dev/karton/server';
+import { createKartonServer } from '@openui-xio/karton/server';
 import { createServer } from 'node:http';
 import { configResolver } from '../config/index.js';
 import { proxy } from './proxy.js';
@@ -35,7 +35,7 @@ const getImportMap = async (plugins: Plugin[]) => {
     process.env.NODE_ENV === 'production'
       ? resolve(__dirname, 'toolbar-bridged/.vite/manifest.json')
       : resolve(
-          'node_modules/@openui-dev/toolbar-bridged/dist/toolbar-main/.vite/manifest.json',
+          'node_modules/@openui-xio/toolbar-bridged/dist/toolbar-main/.vite/manifest.json',
         );
 
   const mainAppManifest = JSON.parse(await readFile(manifestPath, 'utf-8'));
@@ -57,8 +57,8 @@ const getImportMap = async (plugins: Plugin[]) => {
       'react-dom/client': `https://esm.sh/react-dom@19.1.0/client${reactDepsDevSuffix}`,
       'react/jsx-runtime': `https://esm.sh/react@19.1.0/jsx-runtime${reactDepsDevSuffix}`,
       ...mainAppEntries,
-      '@openui-dev/toolbar/config': '/openui-toolbar-app/config.js',
-      '@openui-dev/plugin-sdk': '/openui-toolbar-app/plugin-sdk.js',
+      '@openui-xio/toolbar/config': '/openui-toolbar-app/config.js',
+      '@openui-xio/plugin-sdk': '/openui-toolbar-app/plugin-sdk.js',
       ...generatePluginImportMapEntries(plugins),
     },
   };
@@ -212,7 +212,7 @@ export const getServer = async () => {
     const toolbarPath =
       process.env.NODE_ENV === 'production'
         ? resolve(__dirname, 'toolbar-bridged')
-        : resolve('node_modules/@openui-dev/toolbar-bridged/dist/toolbar-main');
+        : resolve('node_modules/@openui-xio/toolbar-bridged/dist/toolbar-main');
     app.use('/openui-toolbar-app', express.static(toolbarPath));
     app.get(
       '/openui-toolbar-app/config.js',

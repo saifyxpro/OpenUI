@@ -4,7 +4,7 @@ import appStyle from './app.css?inline';
 import { App } from './app.js';
 
 // @ts-ignore - This module is generated at init time and added to the importmap of the hosting iframe
-import config from '@openui-dev/toolbar/config';
+import config from '@openui-xio/toolbar/config';
 
 // Load styling into the document
 const styleNode = document.createElement('style');

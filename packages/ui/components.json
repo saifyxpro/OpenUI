@@ -11,10 +11,10 @@
   },
   "iconLibrary": "lucide",
   "aliases": {
-    "components": "@openui-dev/ui/components",
-    "utils": "@openui-dev/ui/lib/utils",
-    "hooks": "@openui-dev/ui/hooks",
-    "lib": "@openui-dev/ui/lib",
-    "ui": "@openui-dev/ui/components"
+    "components": "@openui-xio/ui/components",
+    "utils": "@openui-xio/ui/lib/utils",
+    "hooks": "@openui-xio/ui/hooks",
+    "lib": "@openui-xio/ui/lib",
+    "ui": "@openui-xio/ui/components"
   }
 }

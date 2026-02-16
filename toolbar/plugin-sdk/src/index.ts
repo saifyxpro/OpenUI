@@ -1,1 +1,1 @@
-export * from '@openui-dev/toolbar-bridged/plugin-sdk';
+export * from '@openui-xio/toolbar-bridged/plugin-sdk';

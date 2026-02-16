@@ -1,5 +1,5 @@
 {
-  "name": "@openui-dev-plugins/react",
+  "name": "@openui-xio-plugins/react",
   "version": "0.0.1",
   "type": "module",
   "keywords": [
@@ -43,7 +43,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@openui-dev/plugin-sdk": "workspace:*",
+    "@openui-xio/plugin-sdk": "workspace:*",
     "typescript": "~5.8.3",
     "react": "19.1.2",
     "react-dom": "19.1.2",
@@ -52,7 +52,7 @@
     "@vitejs/plugin-react-swc": "3.7.0"
   },
   "peerDependencies": {
-    "@openui-dev/plugin-sdk": "workspace:*"
+    "@openui-xio/plugin-sdk": "workspace:*"
   },
   "packageManager": "pnpm@10.10.0"
 }

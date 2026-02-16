@@ -3,7 +3,7 @@
 ## General
 
 - Project name: Karton
-- Package name: "@openui-dev/karton"
+- Package name: "@openui-xio/karton"
 - Language: TypeScript only
 - Public npm package: yes
 - Package manager: pnpm

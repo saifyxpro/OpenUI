@@ -1,5 +1,5 @@
 {
-  "name": "@openui-dev-plugins/angular",
+  "name": "@openui-xio-plugins/angular",
   "version": "0.0.1",
   "type": "module",
   "keywords": [
@@ -45,11 +45,11 @@
     "build": "NODE_ENV=production tsc -b && vite build"
   },
   "peerDependencies": {
-    "@openui-dev/plugin-sdk": "workspace:*"
+    "@openui-xio/plugin-sdk": "workspace:*"
   },
   "dependencies": {},
   "devDependencies": {
-    "@openui-dev/plugin-sdk": "workspace:*",
+    "@openui-xio/plugin-sdk": "workspace:*",
     "typescript": "~5.8.3",
     "react": "19.1.2",
     "react-dom": "19.1.2",

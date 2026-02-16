@@ -40,7 +40,7 @@ export default defineConfig({
         'react-dom',
         'react-dom/client',
         'react/jsx-runtime',
-        '@openui-dev/plugin-sdk',
+        '@openui-xio/plugin-sdk',
       ],
       treeshake: mode === 'production',
     },

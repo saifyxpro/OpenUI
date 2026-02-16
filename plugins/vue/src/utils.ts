@@ -1,4 +1,4 @@
-import type { SelectedElement } from '@openui-dev/plugin-sdk';
+import type { SelectedElement } from '@openui-xio/plugin-sdk';
 
 export interface ComponentInfo {
   name: string;

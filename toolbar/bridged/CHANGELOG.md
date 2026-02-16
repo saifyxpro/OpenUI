@@ -1,4 +1,4 @@
-# @openui-dev/toolbar-bridged
+# @openui-xio/toolbar-bridged
 
 ## 0.0.1
 

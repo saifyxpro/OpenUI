@@ -28,13 +28,13 @@ const WEB_APP_DEPS = [
 ];
 
 export const DEPRECATED_TOOLBAR_PACKAGES = [
-  '@openui-dev/toolbar',
-  '@openui-dev/toolbar-react',
-  '@openui-dev/toolbar-vue',
-  '@openui-dev/toolbar-next',
-  '@openui-dev-plugins/react',
-  '@openui-dev-plugins/vue',
-  '@openui-dev-plugins/angular',
+  '@openui-xio/toolbar',
+  '@openui-xio/toolbar-react',
+  '@openui-xio/toolbar-vue',
+  '@openui-xio/toolbar-next',
+  '@openui-xio-plugins/react',
+  '@openui-xio-plugins/vue',
+  '@openui-xio-plugins/angular',
 ];
 
 export class WorkspaceService {
@@ -57,7 +57,7 @@ export class WorkspaceService {
 
     this.forEachWorkspaceFolderWithLockFile((dependencies, lockFilePath) => {
       const toolbarPackages = Object.entries(dependencies).filter(([key]) =>
-        key.startsWith('@openui-dev/toolbar'),
+        key.startsWith('@openui-xio/toolbar'),
       );
 
       if (toolbarPackages.length > 0) {

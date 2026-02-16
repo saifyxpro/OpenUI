@@ -1,8 +1,8 @@
-import type { KartonContract } from '@openui-dev/karton-contract-bridged';
+import type { KartonContract } from '@openui-xio/karton-contract-bridged';
 import {
   createKartonReactClient,
   useComparingSelector,
-} from '@openui-dev/karton/react/client';
+} from '@openui-xio/karton/react/client';
 
 const [KartonProvider, useKartonState, useKartonProcedure, useKartonConnected] =
   createKartonReactClient<KartonContract>({
