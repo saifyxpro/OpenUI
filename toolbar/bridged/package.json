@@ -60,7 +60,7 @@
     "@types/node": "22.15.2",
     "@types/react": "^19.1.8",
     "@vitejs/plugin-react": "^4.6.0",
-    "autoprefixer": "^10.4.21",
+    "autoprefixer": "^10.4.24",
     "bowser": "^2.11.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
