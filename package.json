@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.0.6",
-    "@changesets/cli": "^2.29.5",
+    "@changesets/cli": "^2.29.8",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@openui-dev/typescript-config": "workspace:*",
