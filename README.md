@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/openui"><img src="https://img.shields.io/npm/v/openui?style=for-the-badge&logo=npm&logoColor=white&label=NPM&color=0969da" alt="npm version" /></a>
+  <a href="https://www.npmjs.com/package/openui-cli"><img src="https://img.shields.io/npm/v/openui-cli?style=for-the-badge&logo=npm&logoColor=white&label=NPM&color=0969da" alt="npm version" /></a>
   <a href="https://github.com/saifyxpro/openui/stargazers"><img src="https://img.shields.io/github/stars/saifyxpro/openui?style=for-the-badge&logo=github&logoColor=white&color=0969da" alt="GitHub stars" /></a>
   <a href="https://github.com/saifyxpro/openui/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/openui?style=for-the-badge&color=0969da" alt="License" /></a>
   <a href="https://marketplace.visualstudio.com/items?itemName=openui-dev.openui"><img src="https://img.shields.io/visual-studio-marketplace/v/openui-dev.openui?style=for-the-badge&logo=visual-studio-code&logoColor=white&label=VS%20Code&color=0969da" alt="VS Code Extension" /></a>
@@ -52,13 +52,13 @@ npm run dev
 ### 2. Run OpenUI (in a second terminal)
 
 ```bash
-npx openui@latest
+npx openui-cli@latest
 ```
 
 Or with pnpm:
 
 ```bash
-pnpm dlx openui@latest
+pnpm dlx openui-cli@latest
 ```
 
 OpenUI will ask which port your app runs on, then open the toolbar overlay in your browser.
