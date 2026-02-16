@@ -12,7 +12,7 @@
   <a href="https://www.npmjs.com/package/openui-cli"><img src="https://img.shields.io/npm/v/openui-cli?style=for-the-badge&logo=npm&logoColor=white&label=NPM&color=0969da" alt="npm version" /></a>
   <a href="https://github.com/saifyxpro/openui/stargazers"><img src="https://img.shields.io/github/stars/saifyxpro/openui?style=for-the-badge&logo=github&logoColor=white&color=0969da" alt="GitHub stars" /></a>
   <a href="https://github.com/saifyxpro/openui/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/openui?style=for-the-badge&color=0969da" alt="License" /></a>
-  <a href="https://marketplace.visualstudio.com/items?itemName=openui-dev.openui"><img src="https://img.shields.io/visual-studio-marketplace/v/openui-dev.openui?style=for-the-badge&logo=visual-studio-code&logoColor=white&label=VS%20Code&color=0969da" alt="VS Code Extension" /></a>
+  <a href="https://open-vsx.org/extension/saifyxpro/openui-vscode-extension"><img src="https://img.shields.io/open-vsx/v/saifyxpro/openui-vscode-extension?style=for-the-badge&logo=open-vsx&logoColor=white&label=Open%20VSX&color=0969da" alt="Open VSX" /></a>
 </p>
 
 <br />
@@ -65,7 +65,7 @@ OpenUI will ask which port your app runs on, then open the toolbar overlay in yo
 
 ### 3. Install the VS Code extension
 
-Install the **OpenUI** extension from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=openui-dev.openui) — it connects the toolbar to your IDE's AI agent.
+Install the **OpenUI** extension from the [Open VSX Registry](https://open-vsx.org/extension/saifyxpro/openui-vscode-extension) — it connects the toolbar to your IDE's AI agent. Works with Cursor, Windsurf, and other AI IDEs.
 
 ## Agent Support
 
