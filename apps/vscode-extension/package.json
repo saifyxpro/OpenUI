@@ -1,0 +1,124 @@
+{
+  "name": "openui-vscode-extension",
+  "displayName": "OpenUI",
+  "private": true,
+  "description": "Select UI elements, describe changes, forward to your IDE's AI agent.",
+  "version": "0.0.1",
+  "publisher": "openui",
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "license": "AGPL-3.0-only",
+  "categories": [
+    "AI",
+    "Debuggers",
+    "Machine Learning",
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished",
+    "onUri"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "openui.setAgent",
+        "title": "Set the preferred agent you want to use with openui",
+        "category": "openui"
+      }
+    ],
+    "icons": {
+      "openui-icon": {
+        "description": "OpenUI icon",
+        "default": {
+          "fontPath": "./openui-icons.woff",
+          "fontCharacter": "\\E800"
+        }
+      }
+    },
+    "configuration": {
+      "title": "openui",
+      "type": "object",
+      "properties": {
+        "openui.telemetry.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable anonymous usage data collection to help improve the product. No personal data is collected.",
+          "tags": [
+            "telemetry",
+            "usesOnlineServices"
+          ],
+          "markdownDescription": "Enable anonymous usage data collection to help improve the product. No personal data is collected.\n\nRead more about our [telemetry data collection](https://github.com/saifyxpro/openui/blob/main/apps/vscode-extension/TELEMETRY.md)."
+        }
+      }
+    }
+  },
+  "homepage": "https://openui.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saifyxpro/openui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/saifyxpro/openui/issues"
+  },
+  "keywords": [
+    "openui",
+    "cursor",
+    "extension",
+    "ai",
+    "code",
+    "agent"
+  ],
+  "scripts": {
+    "vscode:prepublish": "pnpm run build",
+    "run-server": "node ./out/server.js",
+    "build": "webpack --mode production --config webpack.config.js"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.15.2",
+    "@types/vscode": "^1.85.0",
+    "@types/ws": "^8.18.1",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2",
+    "@vscode/vsce": "^3.3.2",
+    "@yarnpkg/lockfile": "^1.1.0",
+    "dotenv": "^17.2.0",
+    "ovsx": "^0.10.5",
+    "ts-loader": "^9.5.2",
+    "tsconfig-paths-webpack-plugin": "^4.2.0",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3",
+    "vitest": "3.1.2",
+    "webpack": "^5.100.0",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "@openui-dev/agent-interface": "workspace:*",
+    "@types/cors": "^2.8.18",
+    "@types/express": "^5.0.1",
+    "@types/js-yaml": "^4.0.9",
+    "@types/yarnpkg__lockfile": "^1.1.9",
+    "axios": "^1.6.7",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "js-yaml": "^4.1.0",
+    "ws": "^8.18.3",
+    "zod": "3.25.76"
+  },
+  "turbo": {
+    "tasks": {
+      "build": {
+        "dependsOn": [
+          "^build"
+        ],
+        "outputs": [
+          "out/**"
+        ]
+      }
+    }
+  }
+}

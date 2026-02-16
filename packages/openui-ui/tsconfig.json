@@ -1,0 +1,15 @@
+{
+  "extends": "@openui-dev/typescript-config/react-library.json",
+  "compilerOptions": {
+    "incremental": true,
+    "module": "preserve",
+    "moduleResolution": "bundler",
+    "composite": true,
+    "baseUrl": ".",
+    "paths": {
+      "@openui-dev/stage-ui/*": ["./src/*"]
+    }
+  },
+  "include": ["."],
+  "exclude": ["node_modules", "dist"]
+}

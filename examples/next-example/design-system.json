@@ -1,0 +1,295 @@
+{
+  "meta": {
+    "query": "Modern SaaS Landing Page focusing on Browser-to-IDE Bridge OpenUI",
+    "stack": "nextjs",
+    "generated_at": "2026-02-16T14:21:17.318057",
+    "version": "2.0.0"
+  },
+  "style": {
+    "name": "Interactive Product Demo",
+    "primary_color": "#0EA5E9",
+    "font_family": "Plus Jakarta Sans"
+  },
+  "tokens": {
+    "--color-primary-50": "hsl(199, 89%, 97%)",
+    "--color-primary-100": "hsl(199, 89%, 94%)",
+    "--color-primary-200": "hsl(199, 89%, 86%)",
+    "--color-primary-300": "hsl(199, 89%, 77%)",
+    "--color-primary-400": "hsl(199, 89%, 66%)",
+    "--color-primary-500": "hsl(199, 89%, 50%)",
+    "--color-primary-600": "hsl(199, 89%, 41%)",
+    "--color-primary-700": "hsl(199, 89%, 35%)",
+    "--color-primary-800": "hsl(199, 89%, 27%)",
+    "--color-primary-900": "hsl(199, 89%, 20%)",
+    "--color-primary-950": "hsl(199, 89%, 12%)",
+    "--color-neutral-50": "hsl(215, 16%, 97%)",
+    "--color-neutral-100": "hsl(215, 16%, 94%)",
+    "--color-neutral-200": "hsl(215, 16%, 86%)",
+    "--color-neutral-300": "hsl(215, 16%, 77%)",
+    "--color-neutral-400": "hsl(215, 16%, 66%)",
+    "--color-neutral-500": "hsl(215, 16%, 50%)",
+    "--color-neutral-600": "hsl(215, 16%, 41%)",
+    "--color-neutral-700": "hsl(215, 16%, 35%)",
+    "--color-neutral-800": "hsl(215, 16%, 27%)",
+    "--color-neutral-900": "hsl(215, 16%, 20%)",
+    "--color-neutral-950": "hsl(215, 16%, 12%)",
+    "--spacing-0": "0px",
+    "--spacing-px": "1px",
+    "--spacing-0.5": "2.0px",
+    "--spacing-1": "4px",
+    "--spacing-1.5": "6.0px",
+    "--spacing-2": "8px",
+    "--spacing-2.5": "10.0px",
+    "--spacing-3": "12px",
+    "--spacing-4": "16px",
+    "--spacing-5": "20px",
+    "--spacing-6": "24px",
+    "--spacing-8": "32px",
+    "--spacing-10": "40px",
+    "--spacing-12": "48px",
+    "--spacing-16": "64px",
+    "--spacing-20": "80px",
+    "--spacing-24": "96px",
+    "--spacing-32": "128px",
+    "--spacing-40": "160px",
+    "--spacing-48": "192px",
+    "--spacing-64": "256px",
+    "--font-family-heading": "'Plus Jakarta Sans', system-ui, sans-serif",
+    "--font-family-body": "'Plus Jakarta Sans', system-ui, sans-serif",
+    "--font-family-mono": "'JetBrains Mono', 'Fira Code', monospace",
+    "--font-size-xs": "0.75rem",
+    "--font-size-sm": "0.875rem",
+    "--font-size-base": "1rem",
+    "--font-size-lg": "1.125rem",
+    "--font-size-xl": "1.25rem",
+    "--font-size-2xl": "1.5rem",
+    "--font-size-3xl": "1.875rem",
+    "--font-size-4xl": "2.25rem",
+    "--font-size-5xl": "3rem",
+    "--font-size-6xl": "3.75rem",
+    "--line-height-tight": "1.25",
+    "--line-height-normal": "1.5",
+    "--line-height-relaxed": "1.75",
+    "--font-weight-normal": "400",
+    "--font-weight-medium": "500",
+    "--font-weight-semibold": "600",
+    "--font-weight-bold": "700",
+    "--radius-none": "0px",
+    "--radius-sm": "8px",
+    "--radius-md": "12px",
+    "--radius-lg": "16px",
+    "--radius-xl": "20px",
+    "--radius-2xl": "28px",
+    "--radius-full": "9999px",
+    "--shadow-xs": "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+    "--shadow-sm": "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)",
+    "--shadow-md": "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+    "--shadow-lg": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
+    "--shadow-xl": "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
+    "--shadow-2xl": "0 25px 50px -12px rgb(0 0 0 / 0.25)",
+    "--duration-fast": "150ms",
+    "--duration-normal": "300ms",
+    "--duration-slow": "500ms",
+    "--easing-default": "cubic-bezier(0.4, 0, 0.2, 1)",
+    "--easing-in": "cubic-bezier(0.4, 0, 1, 1)",
+    "--easing-out": "cubic-bezier(0, 0, 0.2, 1)",
+    "--easing-bounce": "cubic-bezier(0.68, -0.55, 0.265, 1.55)"
+  },
+  "palette": [
+    {
+      "hex": "#0EA5E9",
+      "role": "base",
+      "hsl": "hsl(199, 89%, 48%)"
+    },
+    {
+      "hex": "#E80EA4",
+      "role": "+120°",
+      "hsl": "hsl(319, 89%, 48%)"
+    },
+    {
+      "hex": "#A4E80E",
+      "role": "+240°",
+      "hsl": "hsl(79, 89%, 48%)"
+    },
+    {
+      "hex": "#C9F567",
+      "role": "light variant",
+      "hsl": "hsl(79, 89%, 68%)"
+    },
+    {
+      "hex": "#C9F567",
+      "role": "light variant",
+      "hsl": "hsl(79, 89%, 68%)"
+    }
+  ],
+  "type_scale": [
+    {
+      "name": "xs",
+      "px": 10.24,
+      "rem": 0.64,
+      "line_height": 1.6,
+      "ratio_step": -2
+    },
+    {
+      "name": "sm",
+      "px": 12.8,
+      "rem": 0.8,
+      "line_height": 1.6,
+      "ratio_step": -1
+    },
+    {
+      "name": "base",
+      "px": 16.0,
+      "rem": 1.0,
+      "line_height": 1.5,
+      "ratio_step": 0
+    },
+    {
+      "name": "lg",
+      "px": 20.0,
+      "rem": 1.25,
+      "line_height": 1.45,
+      "ratio_step": 1
+    },
+    {
+      "name": "xl",
+      "px": 25.0,
+      "rem": 1.5625,
+      "line_height": 1.4,
+      "ratio_step": 2
+    },
+    {
+      "name": "2xl",
+      "px": 31.25,
+      "rem": 1.9531,
+      "line_height": 1.35,
+      "ratio_step": 3
+    },
+    {
+      "name": "3xl",
+      "px": 39.06,
+      "rem": 2.4414,
+      "line_height": 1.3,
+      "ratio_step": 4
+    },
+    {
+      "name": "4xl",
+      "px": 48.83,
+      "rem": 3.0518,
+      "line_height": 1.25,
+      "ratio_step": 5
+    }
+  ],
+  "reasoning": [
+    {
+      "category": "Service Landing Page",
+      "pattern": "Hero-Centric + Trust & Authority",
+      "anti_patterns": "Complex navigation + Hidden contact info"
+    },
+    {
+      "category": "SaaS Dashboard",
+      "pattern": "Data-Dense Dashboard",
+      "anti_patterns": "Ornate design + Slow rendering"
+    }
+  ],
+  "ux_guidelines": [
+    {
+      "category": "Navigation",
+      "issue": "Back Button",
+      "do": "Preserve navigation history properly",
+      "dont": "Break browser/app back button behavior"
+    },
+    {
+      "category": "Layout",
+      "issue": "Viewport Units",
+      "do": "Use dvh or account for mobile browser chrome",
+      "dont": "Use 100vh for full-screen mobile layouts"
+    },
+    {
+      "category": "Navigation",
+      "issue": "Active State",
+      "do": "Highlight active nav item with color/underline",
+      "dont": "No visual feedback on current location"
+    }
+  ],
+  "search_sources": {
+    "product": [
+      {
+        "score": 13.315
+      }
+    ],
+    "style": [
+      {
+        "score": 10.933
+      },
+      {
+        "score": 10.507
+      },
+      {
+        "score": 8.953
+      }
+    ],
+    "color": [
+      {
+        "score": 8.468
+      },
+      {
+        "score": 4.629
+      }
+    ],
+    "landing": [
+      {
+        "score": 4.237
+      },
+      {
+        "score": 4.225
+      }
+    ],
+    "typography": [
+      {
+        "score": 10.251
+      },
+      {
+        "score": 8.478
+      }
+    ],
+    "reasoning": [
+      {
+        "score": 8.425
+      },
+      {
+        "score": 6.379
+      }
+    ],
+    "ux": [
+      {
+        "score": 5.994
+      },
+      {
+        "score": 5.696
+      },
+      {
+        "score": 4.774
+      }
+    ],
+    "chart": [
+      {
+        "score": 4.688
+      },
+      {
+        "score": 4.4
+      }
+    ],
+    "stack": [
+      {
+        "score": 5.56
+      },
+      {
+        "score": 4.437
+      },
+      {
+        "score": 4.073
+      }
+    ]
+  }
+}
