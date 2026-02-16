@@ -9,10 +9,15 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/openui-cli"><img src="https://img.shields.io/npm/v/openui-cli?style=for-the-badge&logo=npm&logoColor=white&label=NPM&color=0969da" alt="npm version" /></a>
-  <a href="https://github.com/saifyxpro/openui/stargazers"><img src="https://img.shields.io/github/stars/saifyxpro/openui?style=for-the-badge&logo=github&logoColor=white&color=0969da" alt="GitHub stars" /></a>
-  <a href="https://github.com/saifyxpro/openui/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/openui?style=for-the-badge&color=0969da" alt="License" /></a>
-  <a href="https://open-vsx.org/extension/saifyxpro/openui-vscode-extension"><img src="https://img.shields.io/open-vsx/v/saifyxpro/openui-vscode-extension?style=for-the-badge&logo=open-vsx&logoColor=white&label=Open%20VSX&color=0969da" alt="Open VSX" /></a>
+  <a href="https://www.npmjs.com/package/openui-cli"><img src="https://img.shields.io/npm/v/openui-cli?style=flat-square&logo=npm&logoColor=white&label=openui-cli&color=CB3837" alt="npm" /></a>
+  &nbsp;
+  <a href="https://open-vsx.org/extension/saifyxpro/openui-vscode-extension"><img src="https://img.shields.io/open-vsx/v/saifyxpro/openui-vscode-extension?style=flat-square&logo=eclipse-ide&logoColor=white&label=Open%20VSX&color=C160EF" alt="Open VSX" /></a>
+  &nbsp;
+  <a href="https://github.com/saifyxpro/openui/stargazers"><img src="https://img.shields.io/github/stars/saifyxpro/openui?style=flat-square&logo=github&logoColor=white&color=181717" alt="Stars" /></a>
+  &nbsp;
+  <a href="https://github.com/saifyxpro/openui/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/openui-cli?style=flat-square&color=2B7489" alt="License" /></a>
+  &nbsp;
+  <a href="https://www.npmjs.com/package/openui-cli"><img src="https://img.shields.io/npm/dm/openui-cli?style=flat-square&logo=npm&logoColor=white&label=downloads&color=18A558" alt="Downloads" /></a>
 </p>
 
 <br />
