@@ -52,7 +52,7 @@
     "react-dom": "19.1.2",
     "@types/react": "^19.1.8",
     "vite": "7.0.6",
-    "@vitejs/plugin-react-swc": "3.7.0"
+    "@vitejs/plugin-react-swc": "4.2.3"
   },
   "packageManager": "pnpm@10.10.0"
 }
