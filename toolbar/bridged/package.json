@@ -52,7 +52,7 @@
     "@openui-dev/karton": "workspace:*",
     "@openui-dev/karton-contract-bridged": "workspace:*",
     "@base-ui-components/react": "1.0.0-beta.2",
-    "@headlessui/react": "2.2.2",
+    "@headlessui/react": "2.2.9",
     "@microsoft/api-extractor": "^7.52.8",
     "@openui-dev/agent-interface": "workspace:*",
     "@tailwindcss/postcss": "^4.1.5",
