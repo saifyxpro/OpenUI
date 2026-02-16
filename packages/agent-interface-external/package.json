@@ -45,7 +45,7 @@
     "@types/ws": "^8.18.1",
     "esbuild": "0.25.9",
     "superjson": "2.2.2",
-    "tsup": "^8.4.0",
+    "tsup": "^8.5.1",
     "tsx": "^4.19.2",
     "typescript": "^5.8.3",
     "vitest": "^3.2.4",
