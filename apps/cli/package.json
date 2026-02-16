@@ -26,7 +26,7 @@
     "test:coverage": "vitest run --coverage"
   },
   "devDependencies": {
-    "@inquirer/prompts": "^7.0.0",
+    "@inquirer/prompts": "^8.2.1",
     "@openui-dev-plugins/angular": "workspace:*",
     "@openui-dev-plugins/react": "workspace:*",
     "@openui-dev-plugins/vue": "workspace:*",
